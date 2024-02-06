@@ -22,7 +22,7 @@ export function Home() {
   function juros(parcelas: number, recevied: number) {
     const array: any = [];
     for (let i = 1; i <= parcelas; i++) {
-      const totalAmount = recevied + (recevied * taxa[i - 1]) / 100;
+      const totalAmount = recevied/(1 - taxa[i - 1]/100);
   
       array.push({
         parcela: i,
