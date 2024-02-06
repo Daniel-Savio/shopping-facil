@@ -10,7 +10,6 @@ import {
 import { Input } from "../components/input";
 import { Label } from "../components/label";
 import { useEffect, useRef, useState } from "react";
-import { ReactElement } from "react";
 import icon from "../img/icon.png";
 
 import html2canvas from "html2canvas";
@@ -21,7 +20,7 @@ export function Home() {
   const [received, setReceived]: any = useState("1000");
   const [parcelas, setParcelas]: any = useState("12");
   const [registers, setRegisters]: any = useState("");
-  const printRef= useRef(<div>i</div>);
+  const printRef= useRef<any>("");
 
   function juros(parcelas: number, recevied: number) {
     const array: any = [];
