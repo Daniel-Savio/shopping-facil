@@ -48,11 +48,11 @@ export function Home() {
   function createTable() {
     if (registers.length) {
       return (
-        <Table className="">
-          <TableCaption>Tabela de valores</TableCaption>
+        <Table>
+          <TableCaption className="h-fit">Tabela de valores</TableCaption>
 
           <TableHeader>
-            <TableRow className="border-none flex w-[150px] gap-3 items-center text-green-600 font-bold hover:bg-slate-100  ">
+            <TableRow className="border-none flex w-[140px] gap-2 items-center text-green-600 font-bold hover:bg-slate-100  ">
               <img className="h-8 " src={icon} alt="" />
               <h1 className="">Shopping Fácil</h1>
             </TableRow>
@@ -106,7 +106,7 @@ export function Home() {
 
     if (typeof link.download === 'string') {
       link.href = data;
-      link.download = 'image.jpg';
+      link.download = 'cotacao.jpg';
 
       document.body.appendChild(link);
       link.click();
@@ -164,7 +164,7 @@ export function Home() {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="w-8 h-8 ml-10 mt-1 cursor-pointer transition-all delay-100 hover:text-green-600 active:text-green-600"
+            className="w-6 h-6 ml-10 mt-1 cursor-pointer transition-all delay-100 hover:text-green-600 active:text-green-600"
           >
             <path
               fillRule="evenodd"
@@ -178,7 +178,7 @@ export function Home() {
             viewBox="0 0 24 24"
             fill="currentColor"
             onClick={printTable}
-            className="w-8 h-8 text-violet-700 ml-2 p-1 border-2 rounded-full border-violet-700 cursor-pointer"
+            className="w-6 h-6 text-violet-700 ml-1 p-1 cursor-pointer"
           >
             <path d="M12 9a3.75 3.75 0 1 0 0 7.5A3.75 3.75 0 0 0 12 9Z" />
             <path
@@ -189,7 +189,7 @@ export function Home() {
           </svg>
         </div>
 
-        <div id="table" className="p-1 pb-2" ref={printRef}>
+        <div id="table" className="p-1" ref={printRef}>
           {createTable()}
         </div>
       </div>
