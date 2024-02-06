@@ -101,6 +101,7 @@ export function Home() {
     const element = printRef.current;
     const canvas = await html2canvas(element);
 
+    console.log(canvas.width)
     const data = canvas.toDataURL('image/jpg');
     const link = document.createElement('a');
 
@@ -189,7 +190,7 @@ export function Home() {
           </svg>
         </div>
 
-        <div id="table" className="p-1" ref={printRef}>
+        <div id="table" className="p-2" ref={printRef}>
           {createTable()}
         </div>
       </div>
