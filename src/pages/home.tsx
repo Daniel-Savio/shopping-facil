@@ -174,7 +174,7 @@ export function Home() {
           </svg>
         </div>
 
-        <div id="table" className="p-2 overflow-x-hidden" ref={printRef}>
+        <div id="table" className="p-2" ref={printRef}>
           {createTable()}
         </div>
       </div>
