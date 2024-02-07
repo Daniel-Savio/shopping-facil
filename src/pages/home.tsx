@@ -127,7 +127,7 @@ export function Home() {
       <h1 className="text-slate-50 font-bold text-xl">Calculadora de taxa</h1>
       <div
         id="main-content"
-        className="flex flex-col p-3 bg-slate-100 rounded-md max-h-screen gap-5 w-4/6 max-sm:w-[98%] overflow-y-auto "
+        className="flex flex-col p-3 bg-slate-100 rounded-md max-h-screen gap-5 w-4/6 max-sm:w-[98%] max/sm:h-[110%] overflow-y-auto "
       >
         <div className="flex w-full max-w-sm gap-2 justify-left items-center">
           <div className="inputGroup">
@@ -159,27 +159,11 @@ export function Home() {
           </div>
 
           <svg
-            onClick={() => {
-              window.print();
-            }}
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="w-6 h-6 ml-10 mt-1 cursor-pointer transition-all delay-100 hover:text-green-600 active:text-green-600"
-          >
-            <path
-              fillRule="evenodd"
-              d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 0 0 3 3h.27l-.155 1.705A1.875 1.875 0 0 0 7.232 22.5h9.536a1.875 1.875 0 0 0 1.867-2.045l-.155-1.705h.27a3 3 0 0 0 3-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0 0 18 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25ZM16.5 6.205v-2.83A.375.375 0 0 0 16.125 3h-8.25a.375.375 0 0 0-.375.375v2.83a49.353 49.353 0 0 1 9 0Zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 0 1-.374.409H7.232a.375.375 0 0 1-.374-.409l.526-5.784a.373.373 0 0 1 .333-.337 41.741 41.741 0 0 1 8.566 0Zm.967-3.97a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H18a.75.75 0 0 1-.75-.75V10.5ZM15 9.75a.75.75 0 0 0-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 0 0 .75-.75V10.5a.75.75 0 0 0-.75-.75H15Z"
-              clipRule="evenodd"
-            />
-          </svg>
-
-          <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
             onClick={printTable}
-            className="w-6 h-6 text-violet-700 ml-1 p-1 cursor-pointer"
+            className="w-8 h-8 text-violet-700 ml-1 mt-4 p-1 cursor-pointer"
           >
             <path d="M12 9a3.75 3.75 0 1 0 0 7.5A3.75 3.75 0 0 0 12 9Z" />
             <path
@@ -190,7 +174,7 @@ export function Home() {
           </svg>
         </div>
 
-        <div id="table" className="p-2" ref={printRef}>
+        <div id="table" className="p-2 overflow-x-hidden" ref={printRef}>
           {createTable()}
         </div>
       </div>
