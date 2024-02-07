@@ -127,7 +127,7 @@ export function Home() {
       <h1 className="text-slate-50 font-bold text-xl">Calculadora de taxa</h1>
       <div
         id="main-content"
-        className="flex flex-col p-3 bg-slate-100 rounded-md max-h-screen gap-5 w-4/6 max-sm:w-[95%] overflow-y-auto "
+        className="flex flex-col p-3 bg-slate-100 rounded-md max-h-screen gap-5 w-4/6 max-sm:w-[98%] overflow-y-auto "
       >
         <div className="flex w-full max-w-sm gap-2 justify-left items-center">
           <div className="inputGroup">
